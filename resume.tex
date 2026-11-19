@@ -1,0 +1,81 @@
+% Compile with XeLaTeX, or use build.ps1 for PDF validation and cleanup.
+\documentclass[10pt,letterpaper]{article}
+\usepackage{resume}
+
+% Content lives here; typography, spacing and reusable commands live in resume.sty.
+\newcommand{\resumeName}{Jay Pandya}
+\hypersetup{pdftitle={\resumeName\space - Resume},pdfauthor={\resumeName}}
+
+\begin{document}
+\resumeheader{\MakeUppercase{\resumeName}}{%
+  \contact{https://github.com/jjjpanda}{https://github.com/jjjpanda}\\
+  \contact{https://www.jthepanda.com}{https://www.jthepanda.com}}
+
+\resumesection{WORK EXPERIENCE}
+\employer{JPMorgan Chase \& Co.}{Jersey City, New Jersey}
+\role{Software Engineer (Associate)}{December 2023 – Present}
+% bullets: jpmc-associate
+\begin{highlights}
+\item Spearheaded implementation of ID scanning functionality in authentication UI, integrating hardware devices for the first time in the React web application
+\item Orchestrated Jenkins CI/CD improvements across 15 microservices, including blue-green deployments and enhanced pipeline integration tests, streamlining the development and release process
+\item Leveraged spring-cloud-gateway to implement a pilot release strategy for microservices, enabling rapid issue identification and minimizing impact on partner applications
+\item Championed adoption of spring-cloud-config to enhance system modularity, reduce duplicate configuration, and allow for quick, centralized changes across multiple services within 5 minutes
+\item Collaborated with 20+ client teams to integrate new UI, managing rollout strategies and implementing Dynatrace Real User Monitoring (RUM) to enhance visibility into user experience and application performance
+\end{highlights}
+
+\role{Software Engineer}{August 2021 – December 2023}
+% bullets: jpmc-engineer
+\begin{highlights}
+\item Led migration of legacy authentication UI to React framework, improving security, performance, and maintainability while managing 100,000+ lines of code
+\item Increased code coverage from 20\% to 90\% across multiple microservices within one quarter, primarily introducing TDD and BDD principles to the project
+\item Implemented comprehensive full stack testing strategy, including JUnit, Pitest, Cucumber, Blazemeter for backend, and Jest, StrykerJS, PactFlow, and Selenium for frontend, significantly enhancing application reliability and code quality
+\item Spearheaded migration from Spring into Spring Boot, improving overall system security and maintainability by eliminating high severity vulnerabilities
+\end{highlights}
+
+\employer{National Security Innovation Network}{Remote}
+\role{Software Engineering Contractor}{October 2020 – February 2021}
+% bullets: nsin-contractor
+\begin{highlights}
+\item Developed a cross-platform physical therapy mobile app for DoD-funded startup using React-Native, Unity, and MobX, aimed at rehabilitating injured Army Rangers
+\item Designed and created a Node.js backend API with MongoDB schema, creating a robust full-stack solution for motion capture of 25+ different exercises and user data management
+\end{highlights}
+
+\employer{Nokia Bell Labs Murray Hill}{New Providence, New Jersey}
+\role{Software Engineering Internship}{June 2017 – August 2017}
+% bullets: nokia-intern
+\begin{highlights}
+\item Implemented voice control for Kuboki Turtlebot as C\# WPF application with speech recognition and TTS, integrating with facial recognition research
+\end{highlights}
+
+\resumesection{EDUCATION}
+\employer{Stevens Institute of Technology}{Hoboken, New Jersey}
+\begin{highlights}
+\item Master of Science in Financial Engineering, Certificate in Algorithmic Trading Strategies
+\item Bachelor of Engineering in Software Engineering, Minor in Computer Science
+\end{highlights}
+
+\resumesection{PROJECTS}
+\project{Probability of Informed Trading (PIN) Model}{January 2021 – May 2021}
+% bullets: project-pin
+\begin{highlights}
+\item Produced R scripts to process \textasciitilde30 gigabytes of high-frequency Trade and Quote (TAQ) data from Refinitiv API, implementing new PIN model extensions to incorporate options trades to detect informed trading
+\end{highlights}
+
+\project{Chimera}{June 2020 – September 2020}
+% bullets: project-chimera
+\begin{highlights}
+\item Developed open-source, JavaScript microservice architecture for IP security cameras, managing RTSP streams, and processing recorded frames with motion detection across 6 applications
+\end{highlights}
+
+\project{Outsmart Options}{June 2019 – May 2020}
+% bullets: project-outsmart
+\begin{highlights}
+\item Led 5-person team in developing a MERN stack options profit calculator, architecting algorithmic JavaScript libraries for options strategy analysis and integrating real-time stock data visualization through REST APIs
+\end{highlights}
+
+\resumesection{TECHNICAL SKILLS}
+\skill{Languages}{Java, JavaScript, Typescript, Groovy, Kotlin, Python, R, C++, C\#, HTML, CSS, SASS/SCSS, Less}
+\skill{Frameworks \& Libraries}{React, AngularJS, Spring Boot, Node, Express.js, JUnit, Jest, StrykerJS, PactFlow, Cucumber}
+\skill{Databases}{Cassandra, MongoDB, PostgreSQL}
+\skill{Tools \& Platforms}{Jenkins, Cloud Foundry, AWS, Dynatrace, Splunk, SonarQube, Blazemeter, Bloomberg Terminal}
+\end{document}

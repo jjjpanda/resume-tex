@@ -1,0 +1,74 @@
+\NeedsTeXFormat{LaTeX2e}[2023-11-01]
+\ProvidesPackage{resume}[2026/11/18 Reusable one-page resume layout]
+
+% Layout settings: edit these together when changing the visual design.
+\RequirePackage[left=36bp,right=36bp,top=28bp,bottom=30bp]{geometry}
+\RequirePackage{fontspec}
+\setmainfont{Leelawadee UI}[Kerning=Off,Ligatures=NoCommon]
+\newcommand{\resumeBodyFont}{\fontsize{10pt}{13.3bp}\selectfont}
+\newcommand{\resumeNameFont}{\fontsize{32pt}{34bp}\selectfont\bfseries}
+\newcommand{\resumeContactFont}{\fontsize{9pt}{12bp}\selectfont}
+\newcommand{\resumeDetailWidth}{0.35\linewidth}
+\newlength{\resumeBulletIndent}
+\setlength{\resumeBulletIndent}{18bp}
+\newlength{\resumeSectionGap}
+\setlength{\resumeSectionGap}{1.7bp}
+\newlength{\resumeColumnGap}
+\setlength{\resumeColumnGap}{12bp}
+
+\RequirePackage[normalem]{ulem}
+\renewcommand{\ULthickness}{0.5bp}
+\setlength{\ULdepth}{1bp}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{tabularx}
+\pagestyle{empty}
+\AtBeginDocument{\resumeBodyFont}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\topskip}{0pt}
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
+
+% Content commands use the available line width; no page coordinates.
+\newcommand{\resumeheader}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}X@{\hspace{\resumeColumnGap}}r@{}}
+    {\resumeNameFont #1} &
+    {\resumeContactFont\begin{tabular}[b]{@{}r@{}}#2\end{tabular}}
+  \end{tabularx}\par}
+\newcommand{\contact}[2]{\href{#1}{\uline{#2}}}
+\newcommand{\resumesection}[1]{%
+  \par\noindent\textbf{\MakeUppercase{#1}}\par\nobreak
+  \hrule height 0.5bp\nobreak
+  \vspace{\resumeSectionGap}}
+\newcommand{\resumerow}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{\resumeColumnGap}}>{\raggedleft\arraybackslash}p{\resumeDetailWidth}@{}}
+    #1 & #2
+  \end{tabularx}\par\nobreak}
+\newcommand{\employer}[2]{\resumerow{\textbf{#1}}{\textbf{#2}}}
+\newcommand{\role}[2]{\resumerow{\uline{#1}}{\uline{#2}}}
+\newcommand{\project}[2]{\resumerow{\textbf{#1}}{\uline{#2}}}
+\newenvironment{highlights}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{\resumeBulletIndent}%
+    \setlength{\labelwidth}{\resumeBulletIndent}%
+    \setlength{\labelsep}{0.7em}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \@beginparpenalty=10000}%
+}{\end{list}}
+\newcommand{\skill}[2]{\noindent\textbf{#1:} #2\par}
+
+% Fail even when compiling directly in an editor. The build script also
+% validates the final PDF and removes rejected output.
+\newcount\resume@pages
+\AddToHook{shipout/before}[resume/one-page]{%
+  \global\advance\resume@pages by 1\relax
+  \ifnum\resume@pages>1
+    \PackageError{resume}{Resume exceeds one page}%
+      {Shorten the content or adjust the layout settings in resume.sty.}%
+  \fi}

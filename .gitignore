@@ -1,0 +1,8 @@
+/build/
+/applications/
+# Editors may compile directly alongside resume.tex.
+*.aux
+*.log
+*.out
+*.synctex.gz
+/resume-preview.png
