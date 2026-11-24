@@ -23,94 +23,205 @@
   },
   "bullets": [
     {
-      "id": "id-scanning",
       "role": "jpmc-associate",
       "text": "Spearheaded implementation of ID scanning functionality in authentication UI, integrating hardware devices for the first time in the React web application",
       "keywords": ["React", "frontend", "authentication", "UI", "hardware"]
     },
     {
-      "id": "jenkins-deployments",
       "role": "jpmc-associate",
       "text": "Orchestrated Jenkins CI/CD improvements across 15 microservices, including blue-green deployments and enhanced pipeline integration tests, streamlining the development and release process",
       "keywords": ["Jenkins", "CI/CD", "microservices", "blue-green", "deployment", "integration tests"]
     },
     {
-      "id": "gateway-pilot",
       "role": "jpmc-associate",
       "text": "Leveraged spring-cloud-gateway to implement a pilot release strategy for microservices, enabling rapid issue identification and minimizing impact on partner applications",
       "keywords": ["Spring Cloud Gateway", "Spring", "Java", "microservices", "deployment", "backend"]
     },
     {
-      "id": "centralized-config",
       "role": "jpmc-associate",
       "text": "Championed adoption of spring-cloud-config to enhance system modularity, reduce duplicate configuration, and allow for quick, centralized changes across multiple services within 5 minutes",
       "keywords": ["Spring Cloud Config", "Spring", "Java", "configuration", "backend"]
     },
     {
-      "id": "ui-rollout-monitoring",
       "role": "jpmc-associate",
       "text": "Collaborated with 20+ client teams to integrate new UI, managing rollout strategies and implementing Dynatrace Real User Monitoring (RUM) to enhance visibility into user experience and application performance",
       "keywords": ["Dynatrace", "RUM", "monitoring", "frontend", "UI", "performance", "collaboration"]
     },
     {
-      "id": "react-migration",
       "role": "jpmc-engineer",
       "text": "Led migration of legacy authentication UI to React framework, improving security, performance, and maintainability while managing 100,000+ lines of code",
       "keywords": ["React", "frontend", "authentication", "UI", "security", "performance", "migration"]
     },
     {
-      "id": "test-coverage",
       "role": "jpmc-engineer",
       "text": "Increased code coverage from 20% to 90% across multiple microservices within one quarter, primarily introducing TDD and BDD principles to the project",
       "keywords": ["testing", "code coverage", "microservices", "TDD", "BDD"]
     },
     {
-      "id": "full-stack-testing",
       "role": "jpmc-engineer",
       "text": "Implemented comprehensive full stack testing strategy, including JUnit, Pitest, Cucumber, Blazemeter for backend, and Jest, StrykerJS, PactFlow, and Selenium for frontend, significantly enhancing application reliability and code quality",
       "keywords": ["testing", "full stack", "Java", "JUnit", "Pitest", "Cucumber", "Blazemeter", "backend", "Jest", "StrykerJS", "PactFlow", "Selenium", "frontend", "reliability"]
     },
     {
-      "id": "spring-boot-migration",
       "role": "jpmc-engineer",
       "text": "Spearheaded migration from Spring into Spring Boot, improving overall system security and maintainability by eliminating high severity vulnerabilities",
       "keywords": ["Spring", "Spring Boot", "Java", "security", "migration", "backend"]
     },
     {
-      "id": "physical-therapy-app",
       "role": "nsin-contractor",
       "text": "Developed a cross-platform physical therapy mobile app for DoD-funded startup using React-Native, Unity, and MobX, aimed at rehabilitating injured Army Rangers",
       "keywords": ["React Native", "Unity", "MobX", "mobile", "cross-platform"]
     },
     {
-      "id": "motion-capture-api",
       "role": "nsin-contractor",
       "text": "Designed and created a Node.js backend API with MongoDB schema, creating a robust full-stack solution for motion capture of 25+ different exercises and user data management",
       "keywords": ["Node.js", "backend", "API", "MongoDB", "full stack", "motion capture"]
     },
     {
-      "id": "robot-voice-control",
       "role": "nokia-intern",
       "text": "Implemented voice control for Kuboki Turtlebot as C# WPF application with speech recognition and TTS, integrating with facial recognition research",
       "keywords": ["C#", "WPF", "speech recognition", "TTS", "robotics"]
     },
     {
-      "id": "pin-data-processing",
       "role": "project-pin",
       "text": "Produced R scripts to process ~30 gigabytes of high-frequency Trade and Quote (TAQ) data from Refinitiv API, implementing new PIN model extensions to incorporate options trades to detect informed trading",
       "keywords": ["R", "TAQ", "Refinitiv", "API", "data processing", "options", "trading"]
     },
     {
-      "id": "chimera-microservices",
       "role": "project-chimera",
       "text": "Developed open-source, JavaScript microservice architecture for IP security cameras, managing RTSP streams, and processing recorded frames with motion detection across 6 applications",
       "keywords": ["JavaScript", "microservices", "RTSP", "motion detection", "open-source"]
     },
     {
-      "id": "options-calculator",
       "role": "project-outsmart",
       "text": "Led 5-person team in developing a MERN stack options profit calculator, architecting algorithmic JavaScript libraries for options strategy analysis and integrating real-time stock data visualization through REST APIs",
       "keywords": ["MERN", "MongoDB", "Express", "React", "Node.js", "JavaScript", "options", "REST", "API", "data visualization", "leadership"]
+    },
+    {
+      "role": "nsin-contractor",
+      "text": "Built software for use by Department of Defense (DoD) in the rehabilitation of injured Army Rangers",
+      "keywords": ["DoD", "defense", "healthcare"],
+      "default": false
+    },
+    {
+      "role": "nsin-contractor",
+      "text": "Developed for DoD-funded startup (Revenite) creating a physical therapy cross-platform mobile app",
+      "keywords": ["mobile", "cross-platform", "startup"],
+      "default": false
+    },
+    {
+      "role": "nsin-contractor",
+      "text": "Designed and implemented Node.js backend API and MongoDB schema based on client specification",
+      "keywords": ["Node.js", "backend", "API", "MongoDB"],
+      "default": false
+    },
+    {
+      "role": "nsin-contractor",
+      "text": "Created React-Native frontend around Unity view and with MobX to save exercise motion capture data",
+      "keywords": ["React Native", "Unity", "MobX", "frontend", "mobile", "motion capture"],
+      "default": false
+    },
+    {
+      "role": "nokia-intern",
+      "text": "Implemented voice control for Kuboki Turtlebot to pair with facial recognition team's research",
+      "keywords": ["robotics", "speech recognition", "research"],
+      "default": false
+    },
+    {
+      "role": "nokia-intern",
+      "text": "Created a speech recognition application in Visual C# WPF, conducting tests with speech synthesis",
+      "keywords": ["C#", "WPF", "speech recognition", "TTS"],
+      "default": false
+    },
+    {
+      "role": "nokia-intern",
+      "text": "Integrated solution to send SSH parsed motion commands into Linux hosted ROS server",
+      "keywords": ["SSH", "Linux", "ROS", "robotics"],
+      "default": false
+    },
+    {
+      "role": "nokia-intern",
+      "text": "Produced mobile app in Android Java with Google Cloud Speech-To-Text to control Turtlebot system",
+      "keywords": ["Android", "Java", "mobile", "Google Cloud", "speech recognition"],
+      "default": false
+    },
+    {
+      "role": "project-pin",
+      "text": "Procured, cleaned, and prepared Trade and Quote (TAQ) data from Refinitiv Tick History API",
+      "keywords": ["TAQ", "Refinitiv", "API", "data processing"],
+      "default": false
+    },
+    {
+      "role": "project-pin",
+      "text": "Derived two new extensions of the probability of informed trading (PIN) model to include options trades",
+      "keywords": ["PIN", "options", "trading", "quantitative"],
+      "default": false
+    },
+    {
+      "role": "project-pin",
+      "text": "Wrote R scripts to simulate and calculate informed trading with newly derived likelihood functions",
+      "keywords": ["R", "simulation", "statistics", "trading"],
+      "default": false
+    },
+    {
+      "role": "project-pin",
+      "text": "Found outperformance in high-frequency trading strategies with new PIN model v/s traditional PIN model",
+      "keywords": ["high-frequency trading", "trading", "quantitative"],
+      "default": false
+    },
+    {
+      "role": "project-chimera",
+      "text": "Created a React app that controls IP security cameras' recording schedule and manages recorded frames",
+      "keywords": ["React", "frontend", "JavaScript"],
+      "default": false
+    },
+    {
+      "role": "project-chimera",
+      "text": "Set up a local network of servers and RTSP cameras with an emphasis on modularity and decoupling",
+      "keywords": ["RTSP", "networking", "architecture"],
+      "default": false
+    },
+    {
+      "role": "project-chimera",
+      "text": "Developed Node.js backend API that generates videos or archives of motion activated image captures",
+      "keywords": ["Node.js", "backend", "API", "motion detection"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Managed 5-person team through 1-year Lean software lifecycle for MERN stack web application",
+      "keywords": ["MERN", "Lean", "leadership", "agile"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Facilitated top-down design with Node.js/ExpressJS backend API and Babel/React frontend web app",
+      "keywords": ["Node.js", "Express", "Babel", "React", "backend", "frontend", "API"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Created algorithmic JavaScript libraries to analyze profit probability of options strategies",
+      "keywords": ["JavaScript", "options", "algorithms"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Produced data visualization of option strategies with stock and options chain data from REST API",
+      "keywords": ["data visualization", "options", "REST", "API"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Set up continuous integration running Jest from GitHub continuous deployment to Heroku Cloud Server",
+      "keywords": ["CI/CD", "Jest", "GitHub", "Heroku", "testing"],
+      "default": false
+    },
+    {
+      "role": "project-outsmart",
+      "text": "Connected API to a MongoDB server to allow users to login and save options strategies and watchlists",
+      "keywords": ["MongoDB", "API", "authentication", "backend"],
+      "default": false
     }
   ]
 }

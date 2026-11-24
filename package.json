@@ -2,6 +2,5 @@
   "name": "resume-latex",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
-  "scripts": { "test": "node --test" }
+  "engines": { "node": ">=20" }
 }

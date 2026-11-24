@@ -17,15 +17,13 @@ function check(condition, message) {
 
 export function validateBank(bank) {
   check(Array.isArray(bank?.bullets) && bank.bullets.length > 0, 'The bank must contain a nonempty bullets array.');
-  const ids = new Set();
-  for (const bullet of bank.bullets) {
-    check(nonempty(bullet?.id) && !ids.has(bullet.id), `Invalid or duplicate bullet id: ${bullet?.id}`);
-    ids.add(bullet.id);
-    check(nonempty(bullet.role), `Missing role for ${bullet.id}.`);
-    check(nonempty(bullet.text), `Missing text for ${bullet.id}.`);
+  bank.bullets.forEach((bullet, index) => {
+    const name = `bullet ${index + 1}`;
+    check(nonempty(bullet?.role), `Missing role for ${name}.`);
+    check(nonempty(bullet.text), `Missing text for ${name}.`);
     check(Array.isArray(bullet.keywords) && bullet.keywords.every(nonempty),
-      `keywords must be an array of nonempty strings for ${bullet.id}.`);
-  }
+      `keywords must be an array of nonempty strings for ${name}.`);
+  });
 }
 
 function containsPhrase(description, phrase) {
@@ -41,8 +39,8 @@ export function recommend(bank, jobDescription) {
   const matches = (keyword) => [keyword, ...(aliases.get(normalize(keyword)) ?? [])]
     .some((phrase) => containsPhrase(description, phrase));
   const roles = {};
-  for (const { id, role, text, keywords, default: selected = true } of bank.bullets) {
-    (roles[role] ??= []).push({ id, text, selected, matchedKeywords: [...new Set(keywords)].filter(matches) });
+  for (const { role, text, keywords, default: selected = true } of bank.bullets) {
+    (roles[role] ??= []).push({ text, selected, matchedKeywords: [...new Set(keywords)].filter(matches) });
   }
   for (const bullets of Object.values(roles)) {
     bullets.sort((a, b) => b.matchedKeywords.length - a.matchedKeywords.length);
@@ -116,7 +114,7 @@ async function main() {
     for (const [role, bullets] of Object.entries(application.roles)) {
       console.log(`\n${role}`);
       bullets.forEach((bullet, index) => console.log(
-        `  ${index + 1}. ${bullet.selected ? '' : '(off) '}${bullet.id} [${bullet.matchedKeywords.join(', ') || 'no matches'}]`));
+        `  ${index + 1}. ${bullet.selected ? '' : '(off) '}${bullet.text.slice(0, 60)}… [${bullet.matchedKeywords.join(', ') || 'no matches'}]`));
     }
     return console.log(`\nSaved ${out}. Edit it, then render.`);
   }
