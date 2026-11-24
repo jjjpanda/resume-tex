@@ -18,7 +18,8 @@
     "API": ["APIs"],
     "REST": ["RESTful"],
     "RUM": ["real user monitoring"],
-    "C#": ["CSharp", "C sharp"]
+    "C#": ["CSharp", "C sharp"],
+    "Express": ["Express.js", "ExpressJS"]
   },
   "bullets": [
     {
@@ -37,13 +38,13 @@
       "id": "gateway-pilot",
       "role": "jpmc-associate",
       "text": "Leveraged spring-cloud-gateway to implement a pilot release strategy for microservices, enabling rapid issue identification and minimizing impact on partner applications",
-      "keywords": ["Spring Cloud Gateway", "microservices", "deployment", "backend"]
+      "keywords": ["Spring Cloud Gateway", "Spring", "Java", "microservices", "deployment", "backend"]
     },
     {
       "id": "centralized-config",
       "role": "jpmc-associate",
       "text": "Championed adoption of spring-cloud-config to enhance system modularity, reduce duplicate configuration, and allow for quick, centralized changes across multiple services within 5 minutes",
-      "keywords": ["Spring Cloud Config", "configuration", "backend"]
+      "keywords": ["Spring Cloud Config", "Spring", "Java", "configuration", "backend"]
     },
     {
       "id": "ui-rollout-monitoring",
@@ -67,13 +68,13 @@
       "id": "full-stack-testing",
       "role": "jpmc-engineer",
       "text": "Implemented comprehensive full stack testing strategy, including JUnit, Pitest, Cucumber, Blazemeter for backend, and Jest, StrykerJS, PactFlow, and Selenium for frontend, significantly enhancing application reliability and code quality",
-      "keywords": ["testing", "full stack", "JUnit", "Pitest", "Cucumber", "Blazemeter", "backend", "Jest", "StrykerJS", "PactFlow", "Selenium", "frontend", "reliability"]
+      "keywords": ["testing", "full stack", "Java", "JUnit", "Pitest", "Cucumber", "Blazemeter", "backend", "Jest", "StrykerJS", "PactFlow", "Selenium", "frontend", "reliability"]
     },
     {
       "id": "spring-boot-migration",
       "role": "jpmc-engineer",
       "text": "Spearheaded migration from Spring into Spring Boot, improving overall system security and maintainability by eliminating high severity vulnerabilities",
-      "keywords": ["Spring", "Spring Boot", "security", "migration", "backend"]
+      "keywords": ["Spring", "Spring Boot", "Java", "security", "migration", "backend"]
     },
     {
       "id": "physical-therapy-app",
@@ -109,7 +110,7 @@
       "id": "options-calculator",
       "role": "project-outsmart",
       "text": "Led 5-person team in developing a MERN stack options profit calculator, architecting algorithmic JavaScript libraries for options strategy analysis and integrating real-time stock data visualization through REST APIs",
-      "keywords": ["MERN", "JavaScript", "options", "REST", "API", "data visualization", "leadership"]
+      "keywords": ["MERN", "MongoDB", "Express", "React", "Node.js", "JavaScript", "options", "REST", "API", "data visualization", "leadership"]
     }
   ]
 }
